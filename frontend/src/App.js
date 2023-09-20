@@ -6,9 +6,8 @@ function App() {
   return (
     <div className="App">
       <h2>sih2023
-
+      < MapComponent/>
       </h2>
-      <MapComponent />
     </div>
   );
 }
