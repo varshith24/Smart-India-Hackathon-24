@@ -1,0 +1,13 @@
+/* Map container styles */
+.map-container {
+    width: 100%;
+    max-width: 50vw; /* Limit maximum width to half of the viewport width */
+    margin: 0 auto; /* Center the map horizontally */
+  }
+  
+  /* Map iframe styles */
+  .map-iframe {
+    width: 100%;
+    height: 600px;
+  }
+  
