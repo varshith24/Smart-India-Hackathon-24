@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h2>sih2024ijsijio
+      <h2>Smart india hackathon - 2023
 
       </h2>
     </div>
