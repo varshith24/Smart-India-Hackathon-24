@@ -1,13 +1,80 @@
 /* Map container styles */
-.map-container {
+/* .map-container {
     width: 100%;
-    max-width: 50vw; /* Limit maximum width to half of the viewport width */
-    margin: 0 auto; /* Center the map horizontally */
+    max-width: 50vw; 
+    margin: 0 auto; 
+  } */
+  
+  /* Map iframe styles */
+  /* .map-iframe {
+    width: 100%;
+    height: 600px;
+  }  */
+  /* Map container styles */
+.map-container {
+    display: flex; /* Use flexbox */
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line on smaller screens */
+    justify-content: space-between; /* Space items evenly along the main axis (horizontally) */
+    align-items: flex-start; /* Align items at the start of the cross axis (vertically) */
+    width: 50%;
+    max-width: 50%; /* Allow map to take full width on smaller screens */
   }
   
   /* Map iframe styles */
   .map-iframe {
     width: 100%;
+    max-width: 100%;
     height: 600px;
+  }
+  
+  /* Booking form styles */
+  .booking-form {
+    flex: 1; /* Allow form to grow and take available space */
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-left: 20px; /* Add some spacing between the map and form */
+  }
+  
+  /* Form label styles */
+  .booking-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  /* Form input styles */
+  .booking-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Form button styles */
+  .booking-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Responsive styles for smaller screens */
+  @media screen and (max-width: 768px) {
+    .map-container {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: center; /* Center items vertically on smaller screens */
+    }
+    
+    /* Reset the margin for the form on smaller screens */
+    .booking-form {
+      margin-left: 0;
+    }
   }
   
