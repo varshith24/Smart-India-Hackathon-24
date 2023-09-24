@@ -20,10 +20,17 @@ const col = db.collection("UserData");
 
 app.post("/login", async (req, res) => {
   console.log(req.body);
-    const data = req.body;
+    const data = await req.body;
     try {
-      const response  = await col.findOne({"username" : data.username});
-      if(response.username=== data.username && response.password===data.password)
+      const response  = await col.findOne({"email" : data.email});
+      // const response  = null
+      console.log(response);
+      console.log(data);
+      if(response ==  null)
+      {
+        res.status(400).json({"msg" : "Incorrect Credentials","s":false})
+      }
+      else if(response.email=== data.email && response.password===data.password)
       {
         res.status(200).json({"msg" : "Login SuccessFull","s": true,"username" : response.username,"email" : response.email,"password" : response.password})
       }

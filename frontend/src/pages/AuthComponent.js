@@ -18,7 +18,7 @@ const AuthComponent = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const data = { username, password };
+    const data = { email, password };
     console.log(data)
 
     try {
@@ -30,6 +30,7 @@ const AuthComponent = () => {
         },
       });
       const json = await response.json();
+      console.log(json);
       if(json.s==true)
       {
         toast.success('🦄 Wow so easy!', {
@@ -108,8 +109,8 @@ const AuthComponent = () => {
             <div className="input-field">
               <i className="fas fa-user"></i>
               <input type="text" placeholder="Username" onChange={(e) => {
-                setUsername(e.target.value)
-              }} value={username} />
+                setEmail(e.target.value)
+              }} value={email} />
             </div>
             <div className="input-field">
               <i className="fas fa-lock"></i>
