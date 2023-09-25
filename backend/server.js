@@ -7,7 +7,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-const uri = "mongodb+srv://varshith:varshith@cluster0.zskpoog.mongodb.net/?retryWrites=true&w=majority";
+const uri = "";
 
 const client = new MongoClient(uri);
 client.connect();
